@@ -1,0 +1,55 @@
+README
+For running markdown
+First ensure that "read.html" is empty(by opening in a text editor otherwise running program will overwrite the final output)
+Now that read.html is cleared open terminal in 
+
+Write On terminal 
+bash run.sh
+
+My program is reading from mdtab.txt and gives read.html as the output.
+Some points(for clearly understanding these points please refer "markdown.txt" and "read.html")
+1.For blockquote first character should be >(no spaces or tabs before that)
+
+2. If we use '[' bracket and do not put its corresponding ']' then it 	will hyperlink text after [ without any href,similar is the case if we use '(' after [] brackets and then do not put ')' then it may generate unwanted results.To use these type of characters in text,prefer using html tags. 
+ 
+3. ordered list should start with 
+start;
+
+and end with 
+
+end;
+
+as it is used in sample input file.
+(no spaces allowed before and after start and end)
+4. unordered list should start with 
+
+ustart;
+
+and end with
+
+uend;
+(no spaces allowed before and after ustart and uend)
+5. blockquotes should be a given an ending using 
+
+bend;
+
+6. unordered list should start exaclty next line after 'ustart;'
+
+7.double hyphen will not allow unordered list,use single hyphen.
+
+8.Headings -: There should be atleast one space b/w #(last #) and the text of the heading
+
+9. For bold text ** should be consecutive.If we use single '*' and do not put its closing '*' then whole text will be italics after the first '*'.
+
+10. Direct HTML can be used in two ways:
+<p> HEllo *abcjkc* e </p>
+The above mentioned text will also convert abcjkc into <em> i.e markdown is nested in html tags.
+<p>< HEllo *abcjkc* e ></p>
+The above text will not allow markdown to work inside html tags,hence *abcjkc* will render as *abcjkc*
+
+11. Links,* etc are inline markdown elements,hence should be used within a given line,can be repeated if required in multiple lines. 
+
+12. "mdtab.txt" is the file being read and "read.html" is the file in which output is given.
+
+13. Table starting is indicated by '<<'  and ending by '>>'
+
